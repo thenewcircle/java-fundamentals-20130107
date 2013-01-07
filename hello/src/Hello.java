@@ -1,10 +1,10 @@
 public class Hello {
 
 	public static void main(String[] args) {
-		try {
+		if (args.length == 1) {
 			String name = args[0];
 			System.out.println("Hello, " + name);
-		} catch (ArrayIndexOutOfBoundsException e) {
+		} else {
 			System.out.println("Hello, Nobody!");
 		}
 	}
