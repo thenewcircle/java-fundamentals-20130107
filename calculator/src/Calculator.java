@@ -2,9 +2,17 @@ public class Calculator {
 
 	public static void main(String[] args) {
 
-		// TODO: get an expression from the command line args
+		// make sure we have an expression on the command line
+		if (args.length != 1) {
+			System.err.println("Usage: Calculator <expression>");
+			return;
+		}
+		String expression = args[0];
 
-		// split expression up into tokens
+		// TODO: split expression up into tokens
+
+		
+		
 		// for each token:
 		//   if we see a number:
 		//     - push it on the stack
