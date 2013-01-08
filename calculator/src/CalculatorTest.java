@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.Stack;
+
 import org.junit.Test;
 
 
@@ -8,7 +10,7 @@ public class CalculatorTest {
 	/*
 	 * TODO:
 	 *   handleNumber:
-	 *     should handle number: push number and return true
+	 *     x should handle number: push number and return true
 	 *     should not handle non-number: do nothing and return false
 	 *     
 	 *   handleOperator
@@ -17,12 +19,16 @@ public class CalculatorTest {
 	 *     
 	 *   calculate
 	 *     integration test: result is calculated correctly
-	 *     if you pass garbage, it should throw an exception
+	 *     BONUS: if you pass garbage, it should throw an exception
 	 */
 
 	@Test
-	public void test() {
-		assertEquals(2, 1 + 1);
+	public void handleNumberMustHandleNumbers() {
+		Stack<Integer> stack = new Stack<Integer>();
+		boolean result = Calculator.handleNumber(stack, "5");
+		assertTrue(result);
+		assertEquals(1, stack.size());
+		assertEquals(5, (int) stack.peek());
 	}
 
 }
