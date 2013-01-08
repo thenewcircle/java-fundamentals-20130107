@@ -9,17 +9,19 @@ public class Calculator {
 		}
 		String expression = args[0];
 
-		// TODO: split expression up into tokens
+		// split expression up into tokens
+		String[] tokens = expression.split(" ");
 
+		// for each token in the expression ...
+		for (String token : tokens) {
+			//   if we see a number:
+			//     - push it on the stack
+			//   if we see an operator:
+			//     - pop two numbers
+			//     - perform the op
+			//     - push the result
+		}
 		
-		
-		// for each token:
-		//   if we see a number:
-		//     - push it on the stack
-		//   if we see an operator:
-		//     - pop two numbers
-		//     - perform the op
-		//     - push the result
 		// the result is the last thing left on the stack
 
 	}
