@@ -3,14 +3,17 @@ import java.util.Stack;
 public class Calculator {
 
 	public static void main(String[] args) {
-
 		// make sure we have an expression on the command line
 		if (args.length != 1) {
 			System.err.println("Usage: Calculator <expression>");
 			return;
 		}
 		String expression = args[0];
+		int result = calculate(expression);
+		System.out.println("result: " + result);
+	}
 
+	public static int calculate(String expression) {
 		// split expression up into tokens
 		String[] tokens = expression.split(" ");
 
@@ -24,8 +27,7 @@ public class Calculator {
 		}
 
 		// the result is the last thing left on the stack
-		int result = stack.pop();
-		System.out.println("result: " + result);
+		return stack.pop();
 	}
 
 	public static boolean handleNumber(Stack<Integer> stack, String token) {
