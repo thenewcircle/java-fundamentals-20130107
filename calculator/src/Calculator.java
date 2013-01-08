@@ -14,12 +14,17 @@ public class Calculator {
 
 		// for each token in the expression ...
 		for (String token : tokens) {
-			//   if we see a number:
-			//     - push it on the stack
-			//   if we see an operator:
-			//     - pop two numbers
-			//     - perform the op
-			//     - push the result
+			try {
+				int number = Integer.parseInt(token);
+				System.out.println(number + " is a number");
+				// TODO: push it on the stack
+			} catch (NumberFormatException e) {
+				System.out.println(token + " is not a number");
+				// TODO: if the token is an operator...
+				//     - pop two numbers
+				//     - perform the op
+				//     - push the result
+			}
 		}
 		
 		// the result is the last thing left on the stack
