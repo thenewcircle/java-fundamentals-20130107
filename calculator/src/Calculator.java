@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Calculator {
 
 	public static void main(String[] args) {
@@ -13,13 +15,24 @@ public class Calculator {
 		String[] tokens = expression.split(" ");
 
 		// for each token in the expression ...
+		Stack<Integer> stack = new Stack<Integer>();
 		for (String token : tokens) {
 			try {
 				int number = Integer.parseInt(token);
 				System.out.println(number + " is a number");
 				// TODO: push it on the stack
 			} catch (NumberFormatException e) {
-				System.out.println(token + " is not a number");
+				if (token.equals("+")) {
+					System.out.println(token + " is addition");
+				} else if (token.equals("-")) {
+					System.out.println(token + " is subtraction");
+				} else if (token.equals("*")) {
+					System.out.println(token + " is multiplication");
+				} else if (token.equals("/")) {
+					System.out.println(token + " is division");
+				} else {
+					System.out.println(token + " is garbage");
+				}
 				// TODO: if the token is an operator...
 				//     - pop two numbers
 				//     - perform the op
@@ -27,7 +40,7 @@ public class Calculator {
 			}
 		}
 		
-		// the result is the last thing left on the stack
+		// TODO: the result is the last thing left on the stack
 
 	}
 
