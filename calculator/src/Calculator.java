@@ -18,30 +18,30 @@ public class Calculator {
 		Stack<Integer> stack = new Stack<Integer>();
 		for (String token : tokens) {
 			try {
+				// if the token is an integer, push it
 				int number = Integer.parseInt(token);
-				System.out.println(number + " is a number");
-				// TODO: push it on the stack
+				stack.push(number);
 			} catch (NumberFormatException e) {
+				// if the token is an operator, pop two numbers,
+				// perform the op and push the result
+				int rhs = stack.pop(), lhs = stack.pop();
 				if (token.equals("+")) {
-					System.out.println(token + " is addition");
+					stack.push(lhs + rhs);
 				} else if (token.equals("-")) {
-					System.out.println(token + " is subtraction");
+					stack.push(lhs - rhs);
 				} else if (token.equals("*")) {
-					System.out.println(token + " is multiplication");
+					stack.push(lhs * rhs);
 				} else if (token.equals("/")) {
-					System.out.println(token + " is division");
+					stack.push(lhs / rhs);
 				} else {
-					System.out.println(token + " is garbage");
+					throw new IllegalArgumentException("garbage in expression");
 				}
-				// TODO: if the token is an operator...
-				//     - pop two numbers
-				//     - perform the op
-				//     - push the result
 			}
 		}
-		
-		// TODO: the result is the last thing left on the stack
 
+		// the result is the last thing left on the stack
+		int result = stack.pop();
+		System.out.println("result: " + result);
 	}
 
 }
