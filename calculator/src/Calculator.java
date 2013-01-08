@@ -42,14 +42,17 @@ public class Calculator {
 	public static boolean handleOperator(Stack<Integer> stack, String token) {
 		// if the token is an operator, pop two numbers,
 		// perform the op and push the result
-		int rhs = stack.pop(), lhs = stack.pop();
 		if (token.equals("+")) {
+			int rhs = stack.pop(), lhs = stack.pop();
 			stack.push(lhs + rhs);
 		} else if (token.equals("-")) {
+			int rhs = stack.pop(), lhs = stack.pop();
 			stack.push(lhs - rhs);
 		} else if (token.equals("*")) {
+			int rhs = stack.pop(), lhs = stack.pop();
 			stack.push(lhs * rhs);
 		} else if (token.equals("/")) {
+			int rhs = stack.pop(), lhs = stack.pop();
 			stack.push(lhs / rhs);
 		} else {
 			return false;
