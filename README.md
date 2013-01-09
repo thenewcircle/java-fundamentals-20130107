@@ -1,6 +1,14 @@
 java-fundamentals-20130107
 ==========================
 
+Class design recipe
+-------------------
+
+  * Fields (all private, and mostly final)
+  * Generate constructor
+  * Generate getters and setters
+  * ...
+
 Videos
 ------
 

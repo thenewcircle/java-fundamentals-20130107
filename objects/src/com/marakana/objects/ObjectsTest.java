@@ -7,26 +7,13 @@ public class ObjectsTest {
 
 	@Test
 	public void test() {
-		Laptop lappy = new Laptop();
-		lappy.setModel("MacBook Pro");
-		lappy.setSize(15);
-		
-		Memory[] memory = { new Memory(), new Memory() };
-		memory[0].setSize(8);
-		memory[0].setType("DIMM");
-		memory[1].setSize(8);
-		memory[1].setType("DIMM");
-		lappy.setMemory(memory);
-
-		Disk[] disks = { new Disk() };
-		disks[0].setSize(512);
-		disks[0].setType("SATA");
-		lappy.setDisks(disks);
+		Memory[] memory = { new Memory(8, "DIMM"), new Memory(8, "DIMM") };
+		Disk[] disks = { new Disk(512, "SATA") };
+		Laptop lappy = new Laptop("MacBook Pro", 15, memory, disks);
 
 		lappy.turnOn();
 
-		LaptopBag bag = new LaptopBag();
-		bag.setSize(15);
+		LaptopBag bag = new LaptopBag(15);
 		bag.insertLaptop(lappy);
 		
 		System.out.println(bag);

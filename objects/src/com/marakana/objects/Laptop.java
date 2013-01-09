@@ -1,11 +1,19 @@
 package com.marakana.objects;
+
 public class Laptop {
-	private String model;
-	private int size;
-	private Memory[] memory;
-	private Disk[] disks;
+	private final String model;
+	private final int size;
+	private final Memory[] memory;
+	private final Disk[] disks;
 	private String[] applications;
 	private boolean on;
+
+	public Laptop(String model, int size, Memory[] memory, Disk[] disks) {
+		this.model = model;
+		this.size = size;
+		this.memory = memory;
+		this.disks = disks;
+	}
 
 	public void turnOn() {
 		on = true;
@@ -23,32 +31,16 @@ public class Laptop {
 		return model;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
-	}
-
 	public int getSize() {
 		return size;
-	}
-
-	public void setSize(int size) {
-		this.size = size;
 	}
 
 	public Memory[] getMemory() {
 		return memory;
 	}
 
-	public void setMemory(Memory[] memory) {
-		this.memory = memory;
-	}
-
 	public Disk[] getDisks() {
 		return disks;
-	}
-
-	public void setDisks(Disk[] disks) {
-		this.disks = disks;
 	}
 
 	public String[] getApplications() {
