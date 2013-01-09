@@ -6,4 +6,12 @@ public class Laptop {
 	Disk[] disks;
 	String[] applications;
 	boolean on;
+
+	public void turnOn() {
+		on = true;
+	}
+
+	public void turnOff() {
+		on = false;
+	}
 }

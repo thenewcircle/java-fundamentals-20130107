@@ -23,8 +23,12 @@ public class ObjectsTest {
 		disks[0].type = "SATA";
 		lappy.disks = disks;
 
+		lappy.turnOn();
+		lappy.on = false;
+
 		LaptopBag bag = new LaptopBag();
-		bag.contents = lappy;
+		bag.setSize(15);
+		bag.insertLaptop(lappy);
 		
 		System.out.println(bag);
 	}
