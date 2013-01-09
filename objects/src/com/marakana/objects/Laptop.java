@@ -48,8 +48,11 @@ public class Laptop {
 	}
 
 	public int totalStorage() {
-		// TODO
-		return 0;
+		int total = 0;
+		for (Storage s : storage) {
+			total += s.getSize();
+		}
+		return total;
 	}
 
 	@Override

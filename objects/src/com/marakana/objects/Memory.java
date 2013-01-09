@@ -10,7 +10,7 @@ public class Memory implements Storage {
 	}
 
 	public int getSize() {
-		return size;
+		return size / 1024;
 	}
 
 	public String getType() {
