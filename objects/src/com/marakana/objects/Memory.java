@@ -1,6 +1,6 @@
 package com.marakana.objects;
 
-public class Memory {
+public class Memory implements Storage {
 	private final int size;
 	private final String type;
 
