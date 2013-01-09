@@ -1,3 +1,4 @@
+package com.marakana.hello;
 /**
  * Hello is a class that greets people
  * @author Dan Rosen

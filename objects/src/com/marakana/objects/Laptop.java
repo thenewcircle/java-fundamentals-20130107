@@ -1,3 +1,4 @@
+package com.marakana.objects;
 public class Laptop {
 	String model;
 	int size;

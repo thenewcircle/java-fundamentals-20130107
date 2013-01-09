@@ -1,3 +1,4 @@
+package com.marakana.objects;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

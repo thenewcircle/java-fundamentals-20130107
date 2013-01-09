@@ -1,3 +1,5 @@
+package com.marakana.calculator;
+
 import java.util.Stack;
 
 public class Calculator {
@@ -20,8 +22,7 @@ public class Calculator {
 		// for each token in the expression ...
 		Stack<Integer> stack = new Stack<Integer>();
 		for (String token : tokens) {
-			if (!handleOperator(stack, token) &&
-				!handleNumber(stack, token)) {
+			if (!handleOperator(stack, token) && !handleNumber(stack, token)) {
 				throw new IllegalArgumentException("garbage");
 			}
 		}
