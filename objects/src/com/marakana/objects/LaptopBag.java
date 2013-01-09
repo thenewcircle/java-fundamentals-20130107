@@ -4,7 +4,7 @@ public class LaptopBag {
 	private Laptop laptop;
 
 	public void insertLaptop(Laptop laptop) {
-		if (laptop.size > size) {
+		if (laptop.getSize() > size) {
 			throw new IllegalArgumentException("laptop too big");
 		}
 		

@@ -8,23 +8,22 @@ public class ObjectsTest {
 	@Test
 	public void test() {
 		Laptop lappy = new Laptop();
-		lappy.model = "MacBook Pro";
-		lappy.size = 15;
+		lappy.setModel("MacBook Pro");
+		lappy.setSize(15);
 		
 		Memory[] memory = { new Memory(), new Memory() };
-		memory[0].size = 8;
-		memory[0].type = "DIMM";
-		memory[1].size = 8;
-		memory[1].type = "DIMM";
-		lappy.memory = memory;
+		memory[0].setSize(8);
+		memory[0].setType("DIMM");
+		memory[1].setSize(8);
+		memory[1].setType("DIMM");
+		lappy.setMemory(memory);
 
 		Disk[] disks = { new Disk() };
-		disks[0].size = 512;
-		disks[0].type = "SATA";
-		lappy.disks = disks;
+		disks[0].setSize(512);
+		disks[0].setType("SATA");
+		lappy.setDisks(disks);
 
 		lappy.turnOn();
-		lappy.on = false;
 
 		LaptopBag bag = new LaptopBag();
 		bag.setSize(15);
