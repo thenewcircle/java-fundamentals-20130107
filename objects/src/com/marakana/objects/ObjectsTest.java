@@ -3,9 +3,7 @@ package com.marakana.objects;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -21,11 +19,8 @@ public class ObjectsTest {
 		Laptop lappy = new Laptop("MacBook Pro", 15, storage);		
 		lappy.getStorage().clear();
 		
-		
-		Set<String> applications = new HashSet<String>();
-		applications.add("Eclipse");
-		applications.add("BitTorrent");
-		lappy.setApplications(applications);
+		lappy.installApplication("Eclipse");
+		lappy.installApplication("BitTorrent");
 
 		assertEquals(520, lappy.totalStorage());
 

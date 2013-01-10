@@ -2,6 +2,7 @@ package com.marakana.objects;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -9,7 +10,7 @@ public class Laptop {
 	private final String model;
 	private final int size;
 	private final List<Storage> storage;
-	private Set<String> applications;
+	private final Set<String> applications = new HashSet<String>();
 	private boolean on;
 
 	public Laptop(String model, int size, List<Storage> storage) {
@@ -43,11 +44,15 @@ public class Laptop {
 	}
 
 	public Set<String> getApplications() {
-		return applications;
+		return Collections.unmodifiableSet(applications);
 	}
 
-	public void setApplications(Set<String> applications) {
-		this.applications = applications;
+	public void installApplication(String application) {
+		applications.add(application);
+	}
+
+	public void uninstallApplication(String application) {
+		applications.remove(application);
 	}
 
 	public int totalStorage() {
