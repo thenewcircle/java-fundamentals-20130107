@@ -25,7 +25,7 @@ public class ObjectsTest {
 
 		lappy.turnOn();
 
-		LaptopBag bag = new LaptopBag(15);
+		LaptopBag bag = new LaptopBag(15, Color.BLACK);
 		bag.insertLaptop(lappy);
 
 		System.out.println(bag);
