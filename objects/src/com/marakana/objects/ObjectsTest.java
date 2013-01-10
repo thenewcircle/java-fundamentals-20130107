@@ -14,10 +14,9 @@ public class ObjectsTest {
 		List<Storage> storage = new ArrayList<Storage>();
 		storage.add(new Memory(4096, "DIMM"));
 		storage.add(new Memory(4096, "DIMM"));
-		storage.add(new Disk(512, "SATA"));
+		storage.add(new Disk(512, "SATA", 1));
 
-		Laptop lappy = new Laptop("MacBook Pro", 15, storage);		
-		lappy.getStorage().clear();
+		Laptop lappy = new Laptop("MacBook Pro", storage, 15);
 		
 		lappy.installApplication("Eclipse");
 		lappy.installApplication("BitTorrent");

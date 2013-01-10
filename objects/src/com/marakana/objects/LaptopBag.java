@@ -2,7 +2,7 @@ package com.marakana.objects;
 
 public class LaptopBag {
 	private final int size;
-	private Laptop laptop;
+	private Computer laptop;
 
 	public LaptopBag(int size) {
 		this.size = size;
@@ -20,7 +20,7 @@ public class LaptopBag {
 		this.laptop = laptop;
 	}
 
-	public Laptop getLaptop() {
+	public Computer getLaptop() {
 		return laptop;
 	}
 
