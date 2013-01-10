@@ -13,6 +13,7 @@ public class ObjectsTest {
 				new Memory(4096, "DIMM"),
 				new Disk(512, "SATA")
 			};
+
 		Laptop lappy = new Laptop("MacBook Pro", 15, storage);
 		assertEquals(520, lappy.totalStorage());
 

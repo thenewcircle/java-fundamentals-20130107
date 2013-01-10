@@ -2,6 +2,12 @@ package com.marakana.calculator;
 
 import java.util.Stack;
 
+import com.marakana.calculator.operators.Add;
+import com.marakana.calculator.operators.Divide;
+import com.marakana.calculator.operators.Multiply;
+import com.marakana.calculator.operators.Operator;
+import com.marakana.calculator.operators.Subtract;
+
 public class Calculator {
 
 	public static void main(String[] args) {
@@ -45,21 +51,21 @@ public class Calculator {
 	public static boolean handleOperator(Stack<Integer> stack, String token) {
 		// if the token is an operator, pop two numbers,
 		// perform the op and push the result
+		Operator op;
 		if (token.equals("+")) {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs + rhs);
+			op = new Add();
 		} else if (token.equals("-")) {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs - rhs);
+			op = new Subtract();
 		} else if (token.equals("*")) {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs * rhs);
+			op = new Multiply();
 		} else if (token.equals("/")) {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs / rhs);
+			op = new Divide();
 		} else {
 			return false;
 		}
+
+		int rhs = stack.pop(), lhs = stack.pop();
+		stack.push(op.operate(lhs, rhs));
 		return true;
 	}
 
