@@ -18,7 +18,10 @@ public class ObjectsTest {
 		storage.add(new Memory(4096, "DIMM"));
 		storage.add(new Disk(512, "SATA"));
 
-		Laptop lappy = new Laptop("MacBook Pro", 15, storage);
+		Laptop lappy = new Laptop("MacBook Pro", 15, storage);		
+		lappy.getStorage().clear();
+		
+		
 		Set<String> applications = new HashSet<String>();
 		applications.add("Eclipse");
 		applications.add("BitTorrent");

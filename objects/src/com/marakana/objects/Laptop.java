@@ -1,5 +1,7 @@
 package com.marakana.objects;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -13,7 +15,7 @@ public class Laptop {
 	public Laptop(String model, int size, List<Storage> storage) {
 		this.model = model;
 		this.size = size;
-		this.storage = storage;
+		this.storage = new ArrayList<Storage>(storage);
 	}
 
 	public void turnOn() {
@@ -37,7 +39,7 @@ public class Laptop {
 	}
 
 	public List<Storage> getStorage() {
-		return storage;
+		return Collections.unmodifiableList(storage);
 	}
 
 	public Set<String> getApplications() {
