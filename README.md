@@ -46,3 +46,8 @@ Day 3:
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/3.2.mov
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/3.3.mov
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/3.4.mov
+
+References
+----------
+
+  * Maven: http://maven.apache.org
