@@ -52,7 +52,7 @@ public class Rectangle {
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (!(obj instanceof Rectangle))
 			return false;
 		Rectangle other = (Rectangle) obj;
 		if (height != other.height)
