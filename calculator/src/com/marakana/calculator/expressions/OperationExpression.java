@@ -28,6 +28,10 @@ public class OperationExpression implements Expression {
 		return op.operate(lhs.getValue(), rhs.getValue());
 	}
 
+	public String toString() {
+		return String.format("(%s %s %s)", lhs, op, rhs);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
