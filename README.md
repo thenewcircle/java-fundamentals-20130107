@@ -23,6 +23,11 @@ Commonly-used collections
     * HashMap (very fast operations, unsorted)
     * TreeMap (reasonably fast operations, sorted)
 
+Design patterns
+---------------
+
+  * Composite: implement a recursive data structure by defining an interface, and some implementation classes that may contain other instances of that interface.
+
 Videos
 ------
 
@@ -47,7 +52,16 @@ Day 3:
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/3.3.mov
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/3.4.mov
 
+Day 4:
+
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.1.mov
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.2.mov
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.3.mov
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.4.mov
+
 References
 ----------
 
+  * Best Practices: "Effective Java"
+  * Concurrency: "Java Concurrency in Practice"
   * Maven: http://maven.apache.org
