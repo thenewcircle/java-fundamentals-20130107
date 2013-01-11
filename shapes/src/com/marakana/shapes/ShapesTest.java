@@ -11,21 +11,11 @@ public class ShapesTest {
 	private static final Random RANDOM = new Random();
 
 	@Test
-	public void squaresMustRemainSquare() {
+	public void copyWithWidthMustNotChangeHeight() {
 		for (int i = 0; i < 100; i++) {
-			Square s = arbitrarySquare();
-			s.setWidth(RANDOM.nextInt(50));
-			assertEquals(s.getWidth(), s.getHeight());
-		}
-	}
-
-	@Test
-	public void setWidthMustNotChangeHeight() {
-		for (int i = 0; i < 100; i++) {
-			Rectangle r = arbitraryRectangle();
-			int expected = r.getHeight();
-			r.setWidth(RANDOM.nextInt(50));
-			assertEquals(expected, r.getHeight());
+			Rectangle r1 = arbitraryRectangle();
+			Rectangle r2 = r1.copyWithWidth(RANDOM.nextInt(50));
+			assertEquals(r1.getHeight(), r2.getHeight());
 		}
 	}
 

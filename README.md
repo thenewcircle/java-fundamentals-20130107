@@ -14,6 +14,7 @@ Class inheritance pitfalls
 
   * Be careful not to inherit behavior from a superclass that doesn't apply correctly to the subclass!
   * Be careful not to change assumptions in a subclass that should be true for the superclass!
+  * When classes are immutable, inheritance is much safer (i.e. Liskov substitutability is much easier to maintain and verify).
 
 Commonly-used collections
 -------------------------
