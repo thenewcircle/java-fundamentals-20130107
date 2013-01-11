@@ -10,9 +10,17 @@ public class Client {
 	public static void main(String[] args) {
 		try {
 			Socket server = new Socket(InetAddress.getLocalHost(), 31337);
-			PrintWriter out = new PrintWriter(server.getOutputStream());
-			out.println("Hello, Server!");
-			out.flush();
+			try {
+				PrintWriter out = new PrintWriter(server.getOutputStream());
+				try {
+					out.println("Hello, Server!");
+					out.flush();
+				} finally {
+					out.close();
+				}
+			} finally {
+				server.close();
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
