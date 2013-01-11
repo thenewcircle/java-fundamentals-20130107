@@ -8,19 +8,10 @@ import java.net.Socket;
 public class Client {
 
 	public static void main(String[] args) {
-		try {
-			Socket server = new Socket(InetAddress.getLocalHost(), 31337);
-			try {
-				PrintWriter out = new PrintWriter(server.getOutputStream());
-				try {
-					out.println("Hello, Server!");
-					out.flush();
-				} finally {
-					out.close();
-				}
-			} finally {
-				server.close();
-			}
+		try (Socket server = new Socket(InetAddress.getLocalHost(), 31337);
+				PrintWriter out = new PrintWriter(server.getOutputStream())) {
+			out.println("Hello, Server!");
+			out.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
