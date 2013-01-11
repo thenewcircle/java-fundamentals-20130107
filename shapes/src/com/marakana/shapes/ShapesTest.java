@@ -11,9 +11,10 @@ public class ShapesTest {
 	private static final Random RANDOM = new Random();
 
 	@Test
-	public void squaresMustBeSquare() {
+	public void squaresMustRemainSquare() {
 		for (int i = 0; i < 100; i++) {
 			Square s = arbitrarySquare();
+			s.setWidth(RANDOM.nextInt(50));
 			assertEquals(s.getWidth(), s.getHeight());
 		}
 	}
