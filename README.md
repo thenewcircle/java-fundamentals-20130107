@@ -9,6 +9,12 @@ Class design recipe
   * Getters, setters and other logic
   * Identity: hashCode and equals (implemented using final fields only)
 
+Class inheritance pitfalls
+--------------------------
+
+  * Be careful not to inherit behavior from a superclass that doesn't apply correctly to the subclass!
+  * Be careful not to change assumptions in a subclass that should be true for the superclass!
+
 Commonly-used collections
 -------------------------
 

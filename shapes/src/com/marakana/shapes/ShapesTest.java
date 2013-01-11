@@ -19,11 +19,23 @@ public class ShapesTest {
 		}
 	}
 
+	@Test
+	public void setWidthMustNotChangeHeight() {
+		for (int i = 0; i < 100; i++) {
+			Rectangle r = arbitraryRectangle();
+			int expected = r.getHeight();
+			r.setWidth(RANDOM.nextInt(50));
+			assertEquals(expected, r.getHeight());
+		}
+	}
+
 	private static Square arbitrarySquare() {
 		return new Square(RANDOM.nextInt(50));
 	}
 
 	private static Rectangle arbitraryRectangle() {
-		return new Rectangle(RANDOM.nextInt(50), RANDOM.nextInt(50));
+		return RANDOM.nextBoolean()
+				? arbitrarySquare()
+				: new Rectangle(RANDOM.nextInt(50), RANDOM.nextInt(50));
 	}
 }
