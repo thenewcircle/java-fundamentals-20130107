@@ -2,12 +2,6 @@ package com.marakana.calculator;
 
 import java.util.Stack;
 
-import com.marakana.calculator.operators.Add;
-import com.marakana.calculator.operators.Divide;
-import com.marakana.calculator.operators.Multiply;
-import com.marakana.calculator.operators.Operator;
-import com.marakana.calculator.operators.Subtract;
-
 public class Calculator {
 
 	public static void main(String[] args) {
@@ -53,13 +47,13 @@ public class Calculator {
 		// perform the op and push the result
 		Operator op;
 		if (token.equals("+")) {
-			op = new Add();
+			op = Operator.ADD;
 		} else if (token.equals("-")) {
-			op = new Subtract();
+			op = Operator.SUBTRACT;
 		} else if (token.equals("*")) {
-			op = new Multiply();
+			op = Operator.MULTIPLY;
 		} else if (token.equals("/")) {
-			op = new Divide();
+			op = Operator.DIVIDE;
 		} else {
 			return false;
 		}
