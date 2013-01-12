@@ -34,6 +34,7 @@ Design patterns
 ---------------
 
   * Composite: implement a recursive data structure by defining an interface, and some implementation classes that may contain other instances of that interface.
+  * Decorator: wrap instances of lower-level classes to provide new higher-level functionality.
 
 Videos
 ------
@@ -65,6 +66,11 @@ Day 4:
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.2.mov
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.3.mov
   * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/4.4.mov
+
+Day 5:
+
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/5.1.mov
+  * https://mrkn.s3.amazonaws.com/recordings/java-fundamentals-cisco-20130107/5.2.mov
 
 References
 ----------
